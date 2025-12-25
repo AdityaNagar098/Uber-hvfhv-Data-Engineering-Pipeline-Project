@@ -1,40 +1,77 @@
 # Uber hvfhv Data Engineering Pipeline Project
-Built an end-to-end data analytics pipeline using NYC TLC HVFHV trip data. The project demonstrates data ingestion, cleaning, modeling, and analytics using Snowflake and SQL.
 
-Tech Stack
+## 1. Introduction
 
-Snowflake (Data Warehouse)
+This project demonstrates an end-to-end data engineering pipeline built using NYC TLC High Volume For-Hire Vehicle (HVFHV) trip data (Uber/Lyft).
 
-SQL (Transformations & Modeling)
+The objective of the project is to ingest raw trip data, perform data cleaning and transformation, apply dimensional modeling, and create analytics-ready datasets using Snowflake and SQL.
 
-Parquet (Source data)
+The pipeline follows a layered data architecture (RAW → SILVER → GOLD) to ensure data quality, scalability, and ease of analytics.
+This project is designed as a portfolio project for a Data Engineering Intern role.
 
-Pipeline Architecture
-TLC HVFHV Parquet
-      ↓
-Snowflake RAW (Bronze)
-      ↓
-Snowflake SILVER (Cleaned & standardized)
-      ↓
-Snowflake GOLD (Star schema & analytics views)
+## 2. Architecture
+
+The pipeline follows a modern analytics architecture:
+
+NYC TLC HVFHV Parquet Files
+        ↓
+Local Storage
+        ↓
+Snowflake RAW (Bronze Layer)
+        ↓
+Snowflake SILVER (Cleaned & Standardized Data)
+        ↓
+Snowflake GOLD (Star Schema & Business Metrics)
 
 
-Key Features
+---
 
-Ingested multi-million-row Parquet datasets
+## Layer Description
 
-Performed data profiling and quality checks
+### RAW (Bronze)
+Stores raw Parquet data exactly as ingested from the source without any modification.
 
-Built SILVER layer with validated timestamps and metrics
+### SILVER
+Applies data cleaning, timestamp normalization, validation checks, and derives core trip-level metrics.
 
-Designed a STAR schema (FACT + DIM tables)
+### GOLD
+Implements a **star schema** with fact and dimension tables and exposes business metrics through SQL views for analytics and reporting.
 
-Created analytics-ready GOLD views for business insights
+---
 
-Future Enhancements
+## 3. Technology Used
 
-Add orchestration using Mage or Airflow
+### Data Warehouse
+- Snowflake
 
-Build dashboards using Looker Studio or Streamlit
+### Data Processing & Transformation
+- SQL
 
-Implement incremental loading
+### Data Format
+- Parquet
+
+### Data Modeling
+- Star Schema (Fact & Dimension tables)
+
+### Optional / Future Enhancements
+- Pipeline orchestration using Mage or Airflow  
+- Dashboard using Looker Studio or Streamlit  
+- Incremental data loading  
+
+## 4. Dataset Used
+
+**Dataset:** NYC TLC High Volume For-Hire Vehicle (HVFHV) Trip Records  
+**Source:** NYC Taxi & Limousine Commission (TLC)  
+**Format:** Parquet  
+
+### Dataset Description
+
+The dataset contains trip-level data for high-volume for-hire vehicles such as **Uber and Lyft**, including:
+
+- Pickup and dropoff timestamps  
+- Pickup and dropoff locations  
+- Trip distance and duration  
+- Fare amounts and driver payments  
+
+Official dataset link:  
+https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
