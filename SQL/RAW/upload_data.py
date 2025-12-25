@@ -3,11 +3,11 @@ import os
 
 # --- 1. CONFIGURATION ---
 USER = 'admin'
-PASSWORD = 'z8Dg^idk}__"W82'  # <--- Paste your password here
+PASSWORD = ''  # <--- Paste your password here
 
 # IMPORTANT: Your Account ID usually looks like 'xy12345.us-east-1'
 # Check your URL: https://[ACCOUNT_ID].snowflakecomputing.com
-ACCOUNT = 'ettwraf-ly11294'      
+ACCOUNT = ''      
 
 # List of your specific files
 files_to_upload = [
