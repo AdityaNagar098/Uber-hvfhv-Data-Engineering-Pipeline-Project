@@ -13,17 +13,7 @@ This project is designed as a portfolio project for a Data Engineering Intern ro
 
 The pipeline follows a modern analytics architecture:
 
-NYC TLC HVFHV Parquet Files
-        ↓
-Local Storage
-        ↓
-Snowflake RAW (Bronze Layer)
-        ↓
-Snowflake SILVER (Cleaned & Standardized Data)
-        ↓
-Snowflake GOLD (Star Schema & Business Metrics)
-
-
+![Uber Data Architecture](./data%20Architecture.png)
 ---
 
 ## Layer Description
