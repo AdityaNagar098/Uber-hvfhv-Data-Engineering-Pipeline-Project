@@ -73,5 +73,42 @@ The dataset contains trip-level data for high-volume for-hire vehicles such as *
 - Trip distance and duration  
 - Fare amounts and driver payments  
 
-Official dataset link:  
+### Official dataset link:  
 https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+## Key Features
+
+- Ingested multi-million-row Parquet datasets into Snowflake
+- Performed data profiling and quality checks
+- Built a SILVER layer with validated timestamps and cleaned metrics
+- Designed a STAR schema with FACT and DIM tables
+- Created analytics-ready GOLD views for business insights
+
+## Star Schema Overview
+
+### Fact Table
+
+- FACT_TRIPS
+
+### Dimension Tables
+
+- DIM_DATETIME
+- DIM_LOCATION
+- DIM_COMPANY
+
+### Business Metrics (GOLD Views)
+
+- Trips & revenue by hour
+- Daily revenue trends
+- Company market share (Uber vs Lyft)
+- Weekday vs weekend demand
+- Driver pay efficiency
+
+## Summary
+
+This project focuses on data engineering fundamentals such as ingestion, transformation, modeling, and analytics readiness.
+The pipeline is scalable, modular, and can be easily extended with orchestration or dashboards.
+
+## 📌 Author
+
+### Aditya Nagar
