@@ -1,0 +1,2 @@
+-- RAW layer table creation (schema inferred from Parquet)
+-- Data loaded from NYC TLC HVFHV Parquet files into Snowflake RAW schema

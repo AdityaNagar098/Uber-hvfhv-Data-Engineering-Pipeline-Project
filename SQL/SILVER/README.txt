@@ -1,0 +1,1 @@
+The SILVER layer standardizes timestamps, validates trips, and derives analytics-ready metrics using SQL in Snowflake.
